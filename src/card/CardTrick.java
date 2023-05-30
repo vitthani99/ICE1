@@ -17,15 +17,15 @@ public class CardTrick {
     
     public static void main(String[] args)
     {
-        Card[] magicHand = new Card[7];
+        luckyCard[] magicHand = new luckyCard[7];
         Random rnd = new Random();
         Scanner sc = new Scanner(System.in);
         
         for (int i=0; i<magicHand.length; i++)
         {
-            Card c = new Card();
+            luckyCard c = new luckyCard();
             int v1 = rnd.nextInt(13)+1;
-            String s1 = Card.SUITS[rnd.nextInt(Card.SUITS.length)];
+            String s1 = luckyCard.SUITS[rnd.nextInt(luckyCard.SUITS.length)];
             c.setValue(v1);
             c.setSuit(s1);
             magicHand[i]=c;
@@ -39,8 +39,8 @@ public class CardTrick {
         String i2 = sc.next();
         
         boolean search = false;
-        for(Card card : magicHand){
-            if(card.getValue() == i1 && card.getSuit().equalsIgnoreCase(i2)){
+        for(luckyCard luckycard : magicHand){
+            if(luckycard.getValue() == i1 && luckycard.getSuit().equalsIgnoreCase(i2)){
                 search = true;
                 break;
             }
