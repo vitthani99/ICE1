@@ -39,8 +39,8 @@ public class CardTrick {
         String i2 = sc.next();
         
         boolean search = false;
-        for(luckyCard luckycard : magicHand){
-            if(luckycard.getValue() == i1 && luckycard.getSuit().equalsIgnoreCase(i2)){
+        for(luckyCard card : magicHand){
+            if(card.getValue_1() == i1 && card.getSuit_1().equalsIgnoreCase(i2)){
                 search = true;
                 break;
             }
